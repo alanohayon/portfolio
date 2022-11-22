@@ -1,0 +1,104 @@
+html, body, #tank {
+  background-color: aquamarine;
+
+  margin:0;
+  transform: rotate(270deg);
+  /* min-height:50vh; */
+}
+#tank {
+z-index: 2;
+/* opacity: 0; */
+position: absolute;
+top: -100vw;
+bottom: -80vh;
+left: 0;
+right: 0;
+/* empeche d'aller de droite a gauche */
+overflow-y: scroll;
+/* empeche d'aller de haut en bas */
+overflow-x: hidden;
+background-color: rgb(217, 255, 2);
+
+
+}
+.box {
+  position: absolute;
+  top: 100%; 
+}
+#container > div {
+height: 98vw;
+width: 100vw;
+justify-content: center;
+align-items: center;
+}
+/* .deux {
+  background: #49E83E; 
+  width: 100vw;
+  height: 100vh;
+} */
+.one {
+  background-color: #EDDE05;
+  width: 100vw;
+  height: 100vh;
+}
+.two {
+  background-color: #E84B30;
+  width: 100%;
+  height: 100%;
+}
+.three {
+  background-color: #FCE;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container > div > span {
+display:inline-block;
+transform: rotate(270deg);
+margin: 15px;
+}
+
+/* #bg {
+  background-image:     url('https://www.marcomarino.design/images/annabelle.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position-bottom: 0px;
+  transform: rotate(180deg);
+
+} */
+
+/* .txt-shadow {
+  text-shadow: 1px 1px 2px black;
+} */
+/* .title-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+/* .title-cases {
+  position: relative;
+  z-index: 1;
+  font-family: 'Arial';
+  font-size: 100px;
+  line-height: 55px;
+  font-weight: 500;
+  text-decoration: none;
+  color:#fff;
+  text-transform: uppercase;
+} */
+/* .subtitle-project {
+  position: relative;
+  z-index: 1;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 15px;
+} */
