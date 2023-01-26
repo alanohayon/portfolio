@@ -125,7 +125,9 @@ boxes.forEach((box,key) => {
                                                                     
                                                                 }
                                                                 if(win){
-                                                                    alert(`Gg 😏 SCORE : <hr> Time : ${time} <hr> Number fo tries : ${nbclick/2} `)
+                                                                    alert(`Gg 😏 SCORE :
+Time : ${time}
+Number fo tries : ${nbclick/2} `)
                                                                     window.location.href = "jeu.html";
                                                                 }
                                                                
