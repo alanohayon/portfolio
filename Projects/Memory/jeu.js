@@ -95,7 +95,7 @@ boxes.forEach((box,key) => {
                             setTimeout(() => {
                                 if(tabValeur[clic] == tabValeur[click]){
                             
-                                                                alert(`Bravo ! 1 = ${tabValeur[clic]} 2 = ${tabValeur[key]}`)
+        
                                                                 
                                 //                                 for(i=0; i<tabValeur.length; i++){
                                                         
