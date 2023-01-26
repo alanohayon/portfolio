@@ -139,13 +139,16 @@ boxes.forEach((box,key) => {
                                                                     boxes.item(click).style.transition="800ms"
                                                                     boxes.item(click).style.transform="rotateY(+360deg)"
                                                                 }
-                                for (let i = 0; i < tabValeur.length; i++) {
+                             win = true
+                                                                for (let i = 0; i < tabValeur.length; i++) {
                                                                     if (tabValeur[i] != 0) {
                                                                         win = false
-                                                                    }else if(win){
-                                                                        alert("Gg ma petite Emouna 😏 ")
-                                                                        window.location.href = "jeu.html";
                                                                     }
+                                                                    
+                                                                }
+                                                                if(win){
+                                                                    alert("Gg ma petite Emouna 😏 ")
+                                                                    window.location.href = "jeu.html";
                                                                 }
                             //     for(i=0; i<tabValeur.length; i++){
                             //             if(tabValeur[i] != 0) {
