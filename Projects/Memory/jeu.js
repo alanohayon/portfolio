@@ -155,7 +155,7 @@ function play(){
                 if (win) {
                     //message alert qui felicite le joueur et lui affiche son score(le temps et le nombre d'essais)
                     alert(`Gg 😏 SCORE :
-    Time : ${time}
+    Time : ${time} sec
     Number fo tries : ${nbclick / 2} `)
                     //la page et rafraichi pour la prochaine partie
                     window.location.href = "jeu.html";
