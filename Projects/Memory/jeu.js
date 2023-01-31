@@ -3,14 +3,20 @@ const container = document.querySelectorAll(".box-container");
 //on retient le nombre de div='box' dans la variable boxes, qui est une liste
 var boxes = document.querySelectorAll('.box');
 //initialise le timer à 0
-let time = 0
+let time = 60;
 //variable qui va ensuite servire à redemarer le timer
 let interval;
 
-//Fonction qui chronometre la partie, ajoute 1 toutes les 1 seconde
+//Fonction qui diminue, enleve 1 toutes les 1 seconde
 function timer() {
     console.log(time)
-    time++;
+    time--;
+    //si le temps est depassé, donc egale à 0
+    if( time == 0 ){
+        alert("T'es vraiment nul, t'as depassé le temps sale naze !")
+        window.location.href = "jeu.html";
+
+    }
     //on affiche le timer
     document.querySelector("t").innerHTML = `Timer: ${time}sec`;
 }
@@ -24,8 +30,6 @@ var changeLevel = false;
 function lvl(nbBoxes){
 
     boxes = document.querySelectorAll('.box');
-    time = 0;
-    document.querySelector("t").innerHTML = `Timer: ${time} sec`;
     //redemare le timer
     clearInterval(interval);
     interval = setInterval(timer, 1000);
@@ -50,6 +54,8 @@ function lvl(nbBoxes){
     }
 
     if(nbBoxes == 12){
+        time = 60;
+
         container[0].style.gridTemplateColumns="auto auto auto auto";
         //tableau des valeurs des cartes en doubles
         let petit =[1,2,3,4,5,6,1,2,3,4,5,6]
@@ -57,16 +63,22 @@ function lvl(nbBoxes){
         tabValeur = petit
 
     }else if(nbBoxes == 20){
+        time = 100;
+
         container[0].style.gridTemplateColumns="auto auto auto auto auto";
         let moyen =[1,2,3,4,5,7,8,9,10,1,2,3,4,5,7,8,9,10]
         tabValeur = moyen
 
     }else if(nbBoxes == 24){
+        time = 160;
+
         container[0].style.gridTemplateColumns="auto auto auto auto auto auto";
         let grand =[1,2,3,4,5,7,8,9,10,11,12,6,1,2,3,4,5,6,7,8,9,10,11,12]
         tabValeur = grand
 
     }
+    document.querySelector("t").innerHTML = `Timer: ${time} sec`;
+
 
     boxes = document.querySelectorAll('.box');
 
@@ -135,7 +147,6 @@ function play(){
         }
         
         box.addEventListener('click', (event) => {
-    
             //Animation lors du clic sur la box
             function animBox() {
                 event.target.style.transition = "all 700ms ease-out";
@@ -155,7 +166,7 @@ function play(){
                 if (win) {
                     //message alert qui felicite le joueur et lui affiche son score(le temps et le nombre d'essais)
                     alert(`Gg 😏 SCORE :
-    Time : ${time} sec
+    Time : ${time}
     Number fo tries : ${nbclick / 2} `)
                     //la page et rafraichi pour la prochaine partie
                     window.location.href = "jeu.html";
@@ -218,8 +229,8 @@ function play(){
                         }
                         
                         //Verifier si il a trouvé toutes les cartes
-                        winPlay();
-    
+                        winPlay()
+                            
                         nbclick += 1
     
                     }, "1400")
