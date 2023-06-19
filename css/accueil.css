@@ -585,7 +585,7 @@ li a{
   /* transform: translate(-50%, -50%);  */
   width: 60vw;
   height: 35vw;
-  overflow: scroll;
+  /* overflow: scroll; */
   background: #b4b4b4cf;
 
 
