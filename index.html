@@ -176,6 +176,7 @@
   function php(){
     alert("Veuillez m'excuser, ce projet est en php et je n'ai pas encore connecté mon portfolio à un serveur.")
   }
+  window.addEventListener('wheel', function(event) { if (event.deltaY > 0) { event.preventDefault(); document.documentElement.scrollLeft += 100; } else { event.preventDefault(); document.documentElement.scrollLeft -= 100; } });
 </script>
 </body>
 </html>
